@@ -13,7 +13,16 @@ module.exports = Object.freeze({
   web3Rpc: process.env.WEB3_RPC,
   nodePrivateKey: process.env.WEB3_NODEPRIVATEKEY,
 
-  mongoUri: process.env.MONGODB_URI,
+  // One or more hosts delimited with comma, e.g 'mongo1:27107,mongo2:27017'
+  mongoHosts: process.env.MONGO_HOSTS,
+  mongoDbName: process.env.MONGO_DB_NAME,
+  // Optional config parameters if you wish to enable x509 authentication, SSL
+  // or to connect to a replica set
+  mongoReplicaSet: process.env.MONGO_REPLICA_SET,
+  mongoX509User: process.env.MONGO_X509_USER,
+  mongoX509SslCaPath: process.env.MONGO_X509_SSL_CA_PATH,
+  mongox509SslCertPath: process.env.MONGO_x509_SSL_CERT_PATH,
+  mongox509SslKeyPath: process.env.MONGO_X509_SSL_KEY_PATH,
 
   bundleRegistryContractAddress: process.env.BUNDLE_REGISTRY_CONTRACT_ADDRESS,
   bundleFinalisationInterval: parseInt(process.env.BUNDLE_FINALISATION_INTERVAL, 10) || 15000,

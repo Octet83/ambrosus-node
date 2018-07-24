@@ -39,7 +39,8 @@ describe('Bundle downloader - integration', () => {
     // downloaded from, and another db where bundles are inserted to.
     const config2 = Object.freeze({
       ...config,
-      mongoUri: 'mongodb://localhost:27017/second_db',
+      mongoHosts: 'localhost:27017',
+      mongoDbName: 'second_db',
       bundleRegistryContractAddress: apparatus.config.bundleRegistryContractAddress
     });
 
